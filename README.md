@@ -23,7 +23,7 @@ Now, run your scene.
 
 ## Hope you like it
 
-Making 3D controller can be quite boring, but, GOOD NEWS! We desided to share this basic project with you under MIT Licence, so that more people can benefit and boost up their developing speed. 
+Making 3D controller can be quite boring, but, GOOD NEWS! We decided to share this basic project with you under MIT Licence, so that more people can benefit and boost up their developing speed. 
 
 Credits are appreciated.
 
