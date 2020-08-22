@@ -1,0 +1,145 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://object/Click3DFP.gd" type="Script" id=1]
+
+
+[node name="Click3DFP" type="Spatial"]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0, 0, 0 )
+script = ExtResource( 1 )
+
+[node name="Rot" type="Spatial" parent="."]
+
+[node name="Camera" type="Camera" parent="Rot"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0 )
+far = 200.0
+
+[node name="ButtonLeft" type="Button" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = 25.0
+margin_right = 42.0
+margin_bottom = 75.0
+focus_mode = 0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+enabled_focus_mode = 0
+text = "←L"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonLeftQuick" type="Button" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -125.0
+margin_right = 42.0
+margin_bottom = -75.0
+focus_mode = 0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+enabled_focus_mode = 0
+text = "⇐LQ"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonRight" type="Button" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -42.0
+margin_top = 25.0
+margin_bottom = 75.0
+focus_mode = 0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+enabled_focus_mode = 0
+text = "→R"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonRightQuick" type="Button" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -42.0
+margin_top = -125.0
+margin_bottom = -75.0
+focus_mode = 0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+enabled_focus_mode = 0
+text = "⇒RQ"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonTurnAroundRight" type="Button" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -42.0
+margin_top = -50.0
+focus_mode = 0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+enabled_focus_mode = 0
+text = "⇨RA"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonTurnAroundLeft" type="Button" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -50.0
+margin_right = 42.0
+focus_mode = 0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+enabled_focus_mode = 0
+text = "⇦LA"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UIWord" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -80.0
+margin_top = -60.1422
+margin_right = 81.0
+margin_bottom = -6.14215
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="UIWord"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.501961 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="UIWord"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "前进"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="ButtonLeft" to="." method="_on_ButtonLeft_pressed"]
+[connection signal="pressed" from="ButtonLeftQuick" to="." method="_on_ButtonLeftQuick_pressed"]
+[connection signal="pressed" from="ButtonRight" to="." method="_on_ButtonRight_pressed"]
+[connection signal="pressed" from="ButtonRightQuick" to="." method="_on_ButtonRightQuick_pressed"]
+[connection signal="pressed" from="ButtonTurnAroundRight" to="." method="_on_ButtonTurnAroundRight_pressed"]
+[connection signal="pressed" from="ButtonTurnAroundLeft" to="." method="_on_ButtonTurnAroundLeft_pressed"]
